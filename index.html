@@ -1,84 +1,86 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
     <title>Document</title>
 </head>
-
 <body>
-    <form accept-charset>
-        <fieldset id="bleu">
-            <legend id="bleu">Votre Identité</legend>
+   <!-- Voici comment faire un formulaire -->
+    <form action="#" method="POST">
+      <!-- la partie sur l'Identité -->
+        <fieldset class="identity">
+            <legend class="identity">Votre Identité</legend>
             <ol>
                 <li>
-                    <label for="nom">Nom :</label>
-                    <input type="text" name="Nom" placeholder="Nom" size="30" maxlength="10" />
+                    <label>Nom :
+                        <input type="text" name="lastName" placeholder="Nom" id="lastName"/>
+                    </label>
                 </li>
                 <li>
-                    <label for="prenom">Prenom :</label>
-                    <input type="text" name="prenom" placeholder="Prenom" size="30" maxlength="10" />
+                    <label for="firstName">Prenom :</label>
+                    <input type="text" name="firstName" placeholder="Prenom" id="firstName"/>
                 </li>
                 <li>
                     <label for="mail">Adresse Mail :</label>
-                    <input type="text" name="mail" placeholder="Adresse Mail" size="30" maxlength="10" />
+                    <input type="email" name="mail" placeholder="Adresse Mail" id="mail"/>
                 </li>
             </ol>
         </fieldset>
-        <fieldset id="violet">
-            <legend id="violet">Adresse de Livraison</legend>
+        <!-- la partie sur l'adresse de livraison -->
+        <fieldset class="address">
+            <legend class="address">Adresse de Livraison</legend>
             <ol>
                 <li>
-                    <label for="Adresse">Adresse :</label>
-                    <textarea name="Adresse"></textarea>
+                    <label for="postalAddress">Adresse :</label>
+                    <textarea name="postalAddress" placeholder="Adresse" rows="4" cols="20" id="postalAddress"></textarea>
                 </li>
                 <li>
-                    <label for="postal">Code postal :</label>
-                    <input type="text" name="postal" placeholder="Code postal" size="30" maxlength="10" />
+                    <label for="zipCode">Code postal :</label>
+                    <input type="text" name="zipCode" placeholder="Code postal" id="zipCode"/>
                 </li>
                 <li>
-                    <label for="ville">Ville :</label>
-                    <input type="text" name="ville" placeholder="Ville" size="30" maxlength="10" />
+                    <label for="city">Ville :</label>
+                    <input type="text" name="city" placeholder="Ville" id="city"/>
                 </li>
             </ol>
         </fieldset>
-        </fieldset>
-        <fieldset id="rose">
-            <legend id="rose">Informations de reglements</legend>
-            <div>
+        <!-- la partie des informations de reglements -->
+        <fieldset class="card">
+            <legend class="card">Informations de reglements</legend>
                 <ol>
-                    <li>Type de carte bancaire</li>
-                    <div>
-
-                        <input type="radio" name="cb" value="cb" />
-                        <label for="cb">MasterCard</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="cb" value="cb" />
-                        <label for="cb">VISA</label>
-                        <div>
+                    <li>Type de carte bancaire
+                        <ul>
                             <li>
-                                <label for="cb">Numero de carte :</label>
-
-                                <input type="text" name="cb" placeholder="Numero de carte" size="30" maxlength="10" />
+                                <label>
+                                    <input type="radio" name="card" value="card" id="masterCard"/> MasterCard
+                                </label>
                             </li>
-                        </div>
-                        <li>
-                            <label for="cs">Code de Securité</label>
-                            <input type="text" name="cs" placeholder="Code de Securité" size="30" maxlength="10" />
-                        </li>
-                        <li>
-                            <label for="nom">Nom du titulaire</label>
-                            <input type="text" name="nom" placeholder="Nom du titulaire" size="30" maxlength="10" />
-                        </li>
+                            <li>
+                                <input type="radio" name="card" value="card" id="visa"/>
+                                <label for="visa">VISA</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="numberCard">Numero de carte :</label>
+                        <input type="text" name="numberCard" placeholder="Numero de carte" id="numberCard"/>
+                    </li>
+                    <li>
+                        <label for="security">Code de Securité</label>
+                        <input type="text" name="security" placeholder="Code de Securité" id="security"/>
+                    </li>
+                    <li>
+                        <label for="name">Nom du titulaire</label>
+                        <input type="text" name="name" placeholder="Nom du titulaire" id="name"/>
+                    </li>
                 </ol>
-            </div>
         </fieldset>
+        <!-- Differentes façons de coder le bouton  -->
+        <button type="button">J'achete</button>
+        <input type="button" name="button2" id="button2" value="J'achete"/>
+        <input type="submit" name="button3" id="button3" value="J'achete"/>
+        <button type="submit">J'achete</button>
     </form>
-    <div class="button">
-        <button type="button">J'achete </button>
-    </div>
 </body>
-
 </html>
